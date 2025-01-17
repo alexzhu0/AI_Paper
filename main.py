@@ -1,17 +1,22 @@
 import streamlit as st
 from dx_assistant import DXAssistant
 
-st.title("大纲生成助手")
+st.set_page_config(page_title="智库小助手")
 
-title = st.text_input("输入标题", placeholder="请输入文章标题...")
-thoughts = st.text_area(
-    "输入写作思路",
-    placeholder="请输入写作思路，比如：\n发展概述：...\n功能应用：...\n市场发展：...\n典型产品：...",
-    height=300  # 设置高度
-)
+def main():
+    st.title("智库小助手")
+    
+    title = st.text_input("文章标题")
+    thoughts = st.text_area("写作思路", height=200)
+    
+    if st.button("生成分析"):
+        if title and thoughts:
+            with st.spinner("正在分析中..."):
+                assistant = DXAssistant()
+                result = assistant.analyze(title, thoughts)
+                st.markdown(result)
+        else:
+            st.warning("请输入标题和写作思路")
 
-if st.button("生成大纲"):
-    assistant = DXAssistant()
-    outline = assistant.generate_outline(title, thoughts)
-    formatted = assistant.format_output(outline)
-    st.markdown(formatted) 
+if __name__ == "__main__":
+    main() 

@@ -38,7 +38,9 @@
 
 
 二：使用langchain
+
 三：使用streamlit实现超快速部署，方便兄弟们测试，使用这个：streamlit run main.py
+
 四： 例子如下
   AI产品分析：向量数据库（Vector Database）
   我要从发展概述、功能应用、市场发展、典型产品等方面完成这篇文章，再找一些权威的数据佐证我的思路
