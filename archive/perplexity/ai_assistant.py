@@ -20,11 +20,11 @@ class AIAssistant:
                 "messages": [
                     {
                         "role": "system",
-                        "content": """You are a top-tier 智库研究员，擅长数据分析和信息整合"""
+                        "content": """Be precise and concise."""
                     },
                     {
                         "role": "user",
-                        "content": f"主题：{title}\n分析框架：{thoughts}\n请根据以上信息进行分析。"
+                        "content": f"主题：{title}\n要求：{thoughts}\n请根据以上信息，搜罗全网最新咨询生成一篇完整的分析文章。"
                     }
                 ],
                 "temperature": TEMPERATURE,
