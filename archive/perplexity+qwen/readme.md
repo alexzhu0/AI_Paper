@@ -31,7 +31,7 @@ graph TD
 # dx_assistant.py 核心处理逻辑
 def analyze(self, title: str, thoughts: str) -> str:
     # 1. Perplexity事实核查
-    search_result = self.search_tool.run(title)  # 调用sonar-pro模型
+    search_result = self.search_tool.run(title)  # 调用sonar模型
     
     # 2. 千问框架生成
     prompt = self._build_prompt(title, thoughts, search_result)
@@ -48,7 +48,7 @@ def analyze(self, title: str, thoughts: str) -> str:
 response = httpx.post(
     "https://api.perplexity.ai/chat/completions",
     json={
-        "model": "sonar-pro",
+        "model": "sonar",
         "messages": [{
             "role": "user", 
             "content": f"行业最新数据+权威来源:{query}"
@@ -134,7 +134,7 @@ title = "大模型多模态能力演进路径"
 
 1. API配置
 - 千问API需申请商用权限
-- Perplexity建议使用`sonar-pro`模型
+- Perplexity建议使用`sonar`模型
 
 2. 数据安全
 - 敏感内容建议本地化处理

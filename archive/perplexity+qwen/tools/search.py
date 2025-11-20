@@ -23,7 +23,7 @@ class PerplexitySearchTool(BaseTool):
                 "https://api.perplexity.ai/chat/completions",
                 headers=headers,
                 json={
-                    "model": "sonar-pro",
+                    "model": "sonar",
                     "messages": [{
                         "role": "user", 
                         "content": f"""请详细搜索并提供以下内容的相关信息：

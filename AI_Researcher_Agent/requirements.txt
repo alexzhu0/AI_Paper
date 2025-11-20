@@ -1,8 +1,0 @@
-langchain
-langchain-openai
-langchain-community
-dashscope
-python-dotenv
-streamlit
-httpx
-openai

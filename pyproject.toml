@@ -1,0 +1,17 @@
+[project]
+name = "ai-paper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain==0.3.0",
+    "langchain-openai",
+    "langchain-community",
+    "dashscope",
+    "python-dotenv",
+    "streamlit",
+    "httpx",
+    "openai",
+    "perplexityai>=0.20.0",
+]

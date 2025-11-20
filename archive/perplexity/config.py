@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API Key
-API_KEY = os.getenv('PAI_API_KEY')
-API_ENDPOINT = os.getenv('PAI_API_ENDPOINT')
+API_KEY = os.getenv('PERPLEXITY_API_KEY')
+API_ENDPOINT = os.getenv('PERPLEXITY_API_ENDPOINT')
 # Model configs
-MODEL = "sonar-reasoning-pro"
+MODEL = "sonar"
 TEMPERATURE = 0.6
 TOP_P = 0.9 

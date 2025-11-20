@@ -8,9 +8,9 @@ from config import DASHSCOPE_API_KEY, QWEN_BASE_URL, QWEN_MODEL_NAME, AGENT_TEMP
 
 # 1. Initialize the LLM
 llm = ChatOpenAI(
-    model_name=QWEN_MODEL_NAME,
-    openai_api_base=QWEN_BASE_URL,
-    openai_api_key=DASHSCOPE_API_KEY,
+    model=QWEN_MODEL_NAME,
+    base_url=QWEN_BASE_URL,
+    api_key=DASHSCOPE_API_KEY,
     streaming=True,
     temperature=AGENT_TEMPERATURE
 )
@@ -58,9 +58,9 @@ agent_executor = AgentExecutor(
     handle_parsing_errors=True
 )
 
-def run_agent(user_query: str):
+def run_agent(user_query: str, callbacks=None):
     """Runs the agent with the given user query and returns the result."""
-    return agent_executor.invoke({"input": user_query})
+    return agent_executor.invoke({"input": user_query}, config={"callbacks": callbacks})
 
 if __name__ == '__main__':
     # For testing the agent directly

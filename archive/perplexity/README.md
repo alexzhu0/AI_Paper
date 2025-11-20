@@ -17,7 +17,7 @@
 - Streamlit
 - HTTPX
 - python-dotenv
-- Perplexity AI API (sonar-reasoning-pro)
+- Perplexity AI API (sonar)
 
 > 📚 查看 [Perplexity AI 官方文档](https://docs.perplexity.ai/home/) 了解更多 API 细节
 
@@ -37,8 +37,8 @@ pip install -r requirements.txt
 3. 配置环境变量
 创建 `.env` 文件并添加以下配置：
 ```env
-PAI_API_KEY=your_perplexity_api_key
-PAI_API_ENDPOINT=https://api.perplexity.ai/chat/completions
+PERPLEXITY_API_KEY=your_perplexity_api_key
+PERPLEXITY_API_ENDPOINT=https://api.perplexity.ai/chat/completions
 ```
 
 ## 项目结构
@@ -55,7 +55,7 @@ perplexity/
 
 ## 核心配置
 
-- MODEL: "sonar-reasoning-pro" (Perplexity AI 模型)
+- MODEL: "sonar" (Perplexity AI 模型)
 - TEMPERATURE: 0.6 (生成文本的创造性程度)
 - TOP_P: 0.9 (采样时的累积概率阈值)
 - MAX_TOKENS: 10000 (单次生成的最大token数)

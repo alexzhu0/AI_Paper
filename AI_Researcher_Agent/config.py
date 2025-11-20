@@ -2,7 +2,12 @@ import os
 from dotenv import load_dotenv
 
 # 加载 .env 文件
-load_dotenv()
+# 获取当前文件（config.py）的目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# 1. 尝试加载当前目录 (AI_Researcher_Agent/) 下的 .env
+load_dotenv(os.path.join(current_dir, '.env'))
+# 2. 尝试加载项目根目录下的 .env
+load_dotenv(os.path.join(os.path.dirname(current_dir), '.env'))
 
 # API Keys
 DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY')

@@ -6,7 +6,7 @@ import os
 class AIAssistant:
     def __init__(self, api_key: str = API_KEY):
         self.api_key = api_key
-        self.api_url = os.getenv('PAI_API_ENDPOINT')  # 从环境变量获取
+        self.api_url = os.getenv('PERPLEXITY_API_ENDPOINT')  # 从环境变量获取
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"

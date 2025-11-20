@@ -12,9 +12,9 @@ def article_writer(context: str) -> str:
     It uses the Qwen-max model to generate a high-quality article.
     """
     llm = ChatOpenAI(
-        model_name=QWEN_MODEL_NAME,
-        openai_api_base=QWEN_BASE_URL,
-        openai_api_key=DASHSCOPE_API_KEY,
+        model=QWEN_MODEL_NAME,
+        base_url=QWEN_BASE_URL,
+        api_key=DASHSCOPE_API_KEY,
         streaming=False,
         temperature=0.7
     )
